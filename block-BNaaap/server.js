@@ -1,8 +1,8 @@
 let http = require('http');
 
 function handleServer(req,res){
-console.log(req.headers);
-res.writeHead(201,{'Content-Type': 'text/html'});
+console.log(req.method);
+res.writeHead(201,{'Content-Type': 'text/plain'});
 
 res.write("Hello Gangadhar");
 
