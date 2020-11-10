@@ -265,16 +265,7 @@ function handleServer(req,res){
    console.log(req.url);
    console.log(prasedUrl.query.email);
    res.writeHead(200,{'Content-type':'text/json'})
-   res.end({email:prasedUrl.query.email})
-   
-    // if(req.method === 'GET' && req.url === '/users'){
-    //     res.writeHead(200,{'Content-type':'text/html'});
-    //       res.end(`<input type = text placeholder = name >`);
-        
-    // }else if(req.method === 'POST' && req.url === '/users'){
-    //     res.writeHead(200,{'Content-type':'text/plain'});
-    //     res.end(`Posted for the second time`)
-    // }
+   res.end(JSON.stringify(prasedUrl.query))
   
   }
   
